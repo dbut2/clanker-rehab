@@ -100,8 +100,8 @@ func main() {
 	http.HandleFunc("/api/run", serveRun)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
-	fmt.Println("Server running at http://localhost:3000")
-	log.Fatal(http.ListenAndServe(":3000", nil))
+	fmt.Println("Server running at http://localhost:8080")
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func serveIndex(w http.ResponseWriter, r *http.Request) {

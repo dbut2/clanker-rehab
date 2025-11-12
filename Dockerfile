@@ -4,5 +4,5 @@ WORKDIR /app
 COPY go.mod ./
 RUN go mod download || true
 COPY . .
-EXPOSE 3000
+EXPOSE 8080
 CMD ["go", "run", "main.go"]
