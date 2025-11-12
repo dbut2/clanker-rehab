@@ -127,3 +127,5 @@ This makes it easy to:
 ## License
 
 MIT
+
+<!-- Auto-deploy test Thu Nov 13 02:53:54 AEDT 2025 -->
