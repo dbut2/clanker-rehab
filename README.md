@@ -127,13 +127,3 @@ This makes it easy to:
 ## License
 
 MIT
-
-<!-- Auto-deploy test Thu Nov 13 02:53:54 AEDT 2025 -->
-<!-- Test 1762962972 -->
-<!-- Test 1762963005 -->
-<!-- Final test 1762963086 -->
-<!-- Test after fix 1762963166 -->
-<\!-- Auto-deploy test 1762963846 -->
-<\!-- Test 1762963888 -->
-<\!-- Final test 1762964184 -->
-<\!-- Test after fix 1762964345 -->
