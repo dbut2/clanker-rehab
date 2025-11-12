@@ -16,7 +16,7 @@ const quotes = [
     "Nothing artificial about this intelligence, baby.",
     "Thinking is BACK",
     "Make some mistakes.",
-    "Like agentic coding but you are the agent",
+    "Just like agentic coding! (but you are the agent)",
     "LLM? did someone say Lazy Loser Machine?"
 ];
 
