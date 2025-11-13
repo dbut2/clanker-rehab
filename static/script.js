@@ -457,7 +457,6 @@ function setupEventListeners() {
     document.getElementById('settings-btn').addEventListener('click', openSettings);
     document.querySelector('.close').addEventListener('click', closeSettings);
     document.getElementById('save-settings').addEventListener('click', saveSettingsModal);
-    document.getElementById('clear-all-data').addEventListener('click', clearAllData);
     document.getElementById('teach-btn').addEventListener('click', openTeachingPanel);
     document.querySelector('.close-teaching').addEventListener('click', closeTeachingPanel);
     document.getElementById('show-tests-btn').addEventListener('click', showTests);
@@ -759,19 +758,5 @@ function saveSettingsModal() {
         closeSettings();
     } else {
         alert('Please enter a valid number between 1 and 365');
-    }
-}
-
-function clearAllData() {
-    const confirmed = confirm(
-        'This will clear all learned concepts, answers, drafts, and preferences - are you sure you want to proceed?'
-    );
-
-    if (confirmed) {
-        // Clear all localStorage (learned concepts, solutions, drafts, settings)
-        localStorage.clear();
-
-        // Reload the page
-        window.location.reload();
     }
 }
