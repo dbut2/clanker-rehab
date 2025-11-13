@@ -383,6 +383,19 @@ function renderLearned() {
             loadConcept(concept); // loadConcept now handles loading solutions automatically
         });
 
+        // Trashcan button
+        const trashBtn = document.createElement('button');
+        trashBtn.className = 'trash-btn';
+        trashBtn.innerHTML = '×';
+        trashBtn.title = 'Unlearn this concept';
+        trashBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Don't trigger card click
+            unlearnConcept(concept);
+        });
+
+        // Append elements in order: content, lightbulb (if assisted), trash button
+        card.appendChild(contentDiv);
+
         // Lightbulb icon if this concept was learned with assistance
         if (conceptData.assisted) {
             const lightbulbBtn = document.createElement('span');
@@ -395,17 +408,6 @@ function renderLearned() {
             card.appendChild(lightbulbBtn);
         }
 
-        // Trashcan button
-        const trashBtn = document.createElement('button');
-        trashBtn.className = 'trash-btn';
-        trashBtn.innerHTML = '×';
-        trashBtn.title = 'Unlearn this concept';
-        trashBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Don't trigger card click
-            unlearnConcept(concept);
-        });
-
-        card.appendChild(contentDiv);
         card.appendChild(trashBtn);
 
         learnedList.appendChild(card);
