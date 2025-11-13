@@ -403,7 +403,7 @@ header h1 {
     position: relative;
 }
 
-.lightbulb-indicator:hover::after {
+.learned-card:hover .lightbulb-indicator::after {
     content: attr(data-tooltip);
     position: absolute;
     bottom: 100%;
@@ -421,7 +421,7 @@ header h1 {
     pointer-events: none;
 }
 
-.lightbulb-indicator:hover::before {
+.learned-card:hover .lightbulb-indicator::before {
     content: '';
     position: absolute;
     bottom: 100%;
