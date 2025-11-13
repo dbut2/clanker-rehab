@@ -402,9 +402,7 @@ function renderLearned() {
             lightbulbBtn.className = 'lightbulb-indicator';
             lightbulbBtn.innerHTML = '💡';
             lightbulbBtn.title = 'you needed help to solve this, so it expires sooner';
-            lightbulbBtn.style.cursor = 'default';
-            lightbulbBtn.style.fontSize = '1rem';
-            lightbulbBtn.style.marginRight = '0.25rem';
+            lightbulbBtn.style.cssText = 'cursor: default; font-size: 1rem; margin-right: 0.25rem; flex-shrink: 0; display: inline-block;';
             card.appendChild(lightbulbBtn);
         }
 
