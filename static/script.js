@@ -368,9 +368,8 @@ function renderLearned() {
 
         const name = document.createElement('div');
         name.className = 'learned-name';
-        // Add lightbulb icon if this concept was learned with assistance
         const conceptData = learnedConcepts[id];
-        name.textContent = conceptData.assisted ? `💡 ${concept.name}` : concept.name;
+        name.textContent = concept.name;
 
         const timer = document.createElement('div');
         timer.className = 'learned-timer';
@@ -383,6 +382,18 @@ function renderLearned() {
         contentDiv.addEventListener('click', () => {
             loadConcept(concept); // loadConcept now handles loading solutions automatically
         });
+
+        // Lightbulb icon if this concept was learned with assistance
+        if (conceptData.assisted) {
+            const lightbulbBtn = document.createElement('span');
+            lightbulbBtn.className = 'lightbulb-indicator';
+            lightbulbBtn.innerHTML = '💡';
+            lightbulbBtn.title = 'you needed help to solve this, so it expires sooner';
+            lightbulbBtn.style.cursor = 'default';
+            lightbulbBtn.style.fontSize = '1rem';
+            lightbulbBtn.style.marginRight = '0.25rem';
+            card.appendChild(lightbulbBtn);
+        }
 
         // Trashcan button
         const trashBtn = document.createElement('button');
